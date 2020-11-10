@@ -6,50 +6,27 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#navbar {
-    height: 75px;
-    display: flex;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 100%;
-    z-index: 3;
-    background-color: rgba(10, 50, 100, 10);
-    position: fixed;
-    top: 0;
-    overflow: hidden;
-    align-items: center;
-}
-
 a {
     color: white;
+    text-decoration: none;
 }
 
 a:hover {
     color: rgb(44, 179, 190);
 }
 
-.navNameTitle {
-    padding-left: 25px;
-    font-size: medium;
-    width: fit-content;
+.navStyle {
+    background-color: #211B70;
 }
 
 .navLinks {
-    list-style-type: none;
-    display: flex;
-    right: 5%;
-    text-overflow: none;
-    text-align: justify;
-    width: 20%;
-    justify-content: space-evenly;
-    position: absolute;
+    padding: .5rem;
 }
 
 .helloThere {
     background-image: url(./images/_DSC2844.jpg);
     background-size: cover;
     height: 1200px;
-    margin-top: 75px;
 }
 
 .helloThere h1 {
@@ -74,4 +51,13 @@ a:hover {
 
 .textBlock h2 {
     padding-top: 30px;
+}
+
+.footer {
+    background-color:#211B70;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 0.75rem;
+    color: white;
+    text-align: center;
 }
