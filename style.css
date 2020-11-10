@@ -1,0 +1,77 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#navbar {
+    height: 75px;
+    display: flex;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    z-index: 3;
+    background-color: rgba(10, 50, 100, 10);
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    align-items: center;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: rgb(44, 179, 190);
+}
+
+.navNameTitle {
+    padding-left: 25px;
+    font-size: medium;
+    width: fit-content;
+}
+
+.navLinks {
+    list-style-type: none;
+    display: flex;
+    right: 5%;
+    text-overflow: none;
+    text-align: justify;
+    width: 20%;
+    justify-content: space-evenly;
+    position: absolute;
+}
+
+.helloThere {
+    background-image: url(./images/_DSC2844.jpg);
+    background-size: cover;
+    height: 1200px;
+    margin-top: 75px;
+}
+
+.helloThere h1 {
+    color: whitesmoke;;
+    position: relative;
+    top: 35%;
+    text-align: center;
+}
+
+.helloThere p {
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 37.5%;
+}
+
+.textBlock {
+    text-align: center;
+    color: black;
+    background-color: rgb(192,192,192);
+}
+
+.textBlock h2 {
+    padding-top: 30px;
+}
