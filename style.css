@@ -3,20 +3,23 @@
     padding: 0px;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
 }
 
 a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
 }
 
 a:hover {
     color: rgb(44, 179, 190);
+    text-decoration: none;
 }
 
 .navStyle {
-    background-color: #211B70;
+    background: url(./images/Kyoto.jpg);
 }
 
 .navLinks {
@@ -54,7 +57,7 @@ a:hover {
 }
 
 .footer {
-    background-color:#211B70;
+    background:url(./images/Kyoto.jpg);
     width: 100%;
     padding: 20px 0;
     font-size: 0.75rem;
