@@ -18,46 +18,25 @@ a:hover {
     text-decoration: none;
 }
 
-.navStyle {
-    background: url(./images/Kyoto.jpg);
-}
-
+nav {
+    position: -webkit-sticky;
+    position: fixed;
+    top: 0;
+    height: 69px;
+    width: 100%;
+    background: linear-gradient(to bottom, #020024 0%, #090979 35%, #00d4ff 100%); /* background when scroll is in the top */
+    transition: 0.5s; /* control how smooth the background changes */
+  }
+  
+  /* nav.scrolled {
+    background: #090979;
+  } */
+  
 .navLinks {
     padding: .5rem;
 }
 
-.helloThere {
-    background-image: url(./images/_DSC2844.jpg);
-    background-size: cover;
-    height: 1200px;
-}
-
-.helloThere h1 {
-    color: whitesmoke;;
-    position: relative;
-    top: 35%;
-    text-align: center;
-}
-
-.helloThere p {
-    color: white;
-    text-align: center;
-    position: relative;
-    top: 37.5%;
-}
-
-.textBlock {
-    text-align: center;
-    color: black;
-    background-color: rgb(192,192,192);
-}
-
-.textBlock h2 {
-    padding-top: 30px;
-}
-
 .footer {
-    background:url(./images/Kyoto.jpg);
     width: 100%;
     padding: 20px 0;
     font-size: 0.75rem;
