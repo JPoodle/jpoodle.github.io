@@ -1,32 +1,91 @@
+//Remove all overlays on clicking logo
 $("#logo").click(function () {
-  $(".overlay").css("display", "none");
+  $(".overlay").fadeOut("slow").promise().done( function () {
+    $(".hidden").animate({ left: "100vw" }, 1000);
+  });
+  $(".contactMeBlock").animate({ bottom: -250 }, 500);
 });
 
-$("#aboutMe").on('click', function () {
-  $("#travelPage").fadeOut()
-  $(".contactMeBlock").animate({ top: 1000 }, 500);
-  $("#aboutMePage").fadeToggle(function(){
-  }).css("display","flex");
+//Add overlays to page - needs to be cleaned up to not repeat
+$("#aboutMe").on("click", function () {
+  $("#travelPage")
+    .fadeOut()
+    .promise()
+    .done(function () {
+      $(".hidden")
+        .animate({ left: "100vw" }, 1000)
+        .removeClass("active")
+        .promise()
+        .done(function () {
+          $(".contactMeBlock")
+            .animate({ bottom: -250 }, 500)
+            .promise()
+            .done(function () {
+              $("#hiddenAboutMe .hidden")
+                .animate({ left: `0` }, 1000)
+                .promise()
+                .done(function () {
+                  $("#aboutMePage").fadeToggle().css("display", "flex");
+                });
+            });
+          showingContactSlider = false;
+          $("#hiddenAboutMe .hidden").addClass("active");
+        });
+    });
 });
 
-$("#travel").on('click', function () {
-  $("#aboutMePage").fadeOut()
-  $(".contactMeBlock").animate({ top: 1000 }, 500);
-  $("#travelPage").fadeToggle(function(){
-  }).css("display","flex");
+$("#travel").on("click", function () {
+  $("#aboutMePage")
+    .fadeOut()
+    .promise()
+    .done(function () {
+      $(".contactMeBlock")
+        .animate({ bottom: -250 }, 500)
+        .promise()
+        .done(function () {
+          $(".hidden")
+            .animate({ left: "100vw" }, 1000)
+            .removeClass("active")
+            .promise()
+            .done(function () {
+              $("#hiddenTravel .hidden")
+                .animate({ left: "0" }, 1000)
+                .promise()
+                .done(function () {
+                  $("#travelPage")
+                    .fadeToggle()
+                    .css("display", "flex")
+                    .promise().done;
+                });
+            });
+        });
+      showingContactSlider = false;
+      $("#hiddenTravel .hidden").addClass("active");
+    });
 });
 
-var showingSlider = false;
+//Slide up "Contact Me" section
+var showingContactSlider = false;
 $("#contactMe").click(function () {
-  $(".overlay").css("display", "none");
-
-  if (!showingSlider) {
-    showingSlider = true;
-    $(".contactMeBlock").animate({ top: 500 }, 500);
-  } else {
-    if (showingSlider) {
-      showingSlider = false;
-      $(".contactMeBlock").animate({ top: 1000 }, 500);
-    }
-  }
+  $(".overlay")
+    .fadeOut()
+    .promise()
+    .done(function () {
+      $(".hidden")
+        .animate({ left: "100vw" }, 1000)
+        .removeClass("active")
+        .promise()
+        .done(function () {
+          if (!showingContactSlider) {
+            showingContactSlider = true;
+            $(".contactMeBlock").animate({ bottom: 0 }, 500).promise().done();
+          } else if (showingContactSlider) {
+            showingContactSlider = false;
+            $(".contactMeBlock")
+              .animate({ bottom: -250 }, 500)
+              .promise()
+              .done();
+          }
+        });
+    });
 });

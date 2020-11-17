@@ -27,11 +27,22 @@ a:hover {
   width: 100vw;
   min-height: 100vh;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   background-color: rgba(0, 0, 0, 0.7);
   display: none;
   justify-content: center;
   align-items: center;
+}
+
+.hidden {
+  width: 100vw;
+  height: 100vh;
+  left: 100vw;
+  position: fixed;
+  z-index: 1;
+  object-fit: cover;
+  overflow: hidden;
+  align-content: center;
 }
 
 #banner {
@@ -42,6 +53,7 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   position: fixed;
+  z-index:0;
 }
 
 .contactMeBlock {
@@ -49,7 +61,7 @@ a:hover {
   width: 100vw;
   z-index: 10000;
   text-align: center;
-  height: 500px;
+  height: 20vh;
   background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center; /* align horizontal */
@@ -57,5 +69,5 @@ a:hover {
   left: 0;
   margin-right: auto;
   margin-left: auto;
-  bottom: -500px;
+  bottom: -20vh;
 }
