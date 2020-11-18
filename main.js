@@ -6,61 +6,35 @@ $("#logo").click(function () {
   $(".contactMeBlock").animate({ bottom: -250 }, 500);
 });
 
+var aboutMeActive = 0;
 //Add overlays to page - needs to be cleaned up to not repeat
 $("#aboutMe").on("click", function () {
-  $("#travelPage")
-    .fadeOut()
-    .promise()
-    .done(function () {
-      $(".hidden")
-        .animate({ left: "100vw" }, 1000)
-        .removeClass("active")
-        .promise()
-        .done(function () {
-          $(".contactMeBlock")
-            .animate({ bottom: -250 }, 500)
-            .promise()
-            .done(function () {
-              $("#hiddenAboutMe .hidden")
-                .animate({ left: `0` }, 1000)
-                .promise()
-                .done(function () {
-                  $("#aboutMePage").fadeToggle().css("display", "flex");
-                });
-            });
+  $(".overlay.active").fadeOut().removeClass("active").promise().done(function () {
+      $(".hidden.active").animate({ left: "100vw" }, 1000).removeClass("active").promise().done(function () {
+          $(".contactMeBlock").animate({ bottom: "-250" }, 500, function () {
+              if (aboutMeActive%2 == 0){
+                $("#hiddenAboutMe.hidden").animate({ left: "0" }, 1000).addClass("active").promise().done(function () {
+                  $("#aboutMePage.overlay").fadeIn().addClass("active").css("display", "flex").promise().done();
+              });
+            }aboutMeActive++; travelActive = 0;});
           showingContactSlider = false;
-          $("#hiddenAboutMe .hidden").addClass("active");
-        });
+    });
     });
 });
 
+var travelActive = 0;
+//Add overlays to page - needs to be cleaned up to not repeat
 $("#travel").on("click", function () {
-  $("#aboutMePage")
-    .fadeOut()
-    .promise()
-    .done(function () {
-      $(".contactMeBlock")
-        .animate({ bottom: -250 }, 500)
-        .promise()
-        .done(function () {
-          $(".hidden")
-            .animate({ left: "100vw" }, 1000)
-            .removeClass("active")
-            .promise()
-            .done(function () {
-              $("#hiddenTravel .hidden")
-                .animate({ left: "0" }, 1000)
-                .promise()
-                .done(function () {
-                  $("#travelPage")
-                    .fadeToggle()
-                    .css("display", "flex")
-                    .promise().done;
-                });
-            });
-        });
-      showingContactSlider = false;
-      $("#hiddenTravel .hidden").addClass("active");
+  $(".overlay.active").fadeOut().removeClass("active").promise().done(function () {
+      $(".hidden.active").animate({ left: "100vw" }, 1000).removeClass("active").promise().done(function () {
+          $(".contactMeBlock").animate({ bottom: "-250" }, 500, function () {
+              if (travelActive%2 == 0){
+                $("#hiddenTravel.hidden").animate({ left: "0" }, 1000).addClass("active").promise().done(function () {
+                  $("#travelPage.overlay").fadeIn().addClass("active").css("display", "flex").promise().done();
+              });
+            }travelActive++; aboutMeActive =0});
+          showingContactSlider = false;
+    });
     });
 });
 
