@@ -39,6 +39,20 @@ a:hover {
   align-items: center;
 }
 
+#aboutMeBackground {
+  background-image: url("./images/aboutMeBackground.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#travelBackground {
+  background-image: url("./images/travelBackground.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left; 
+}
+
 .hidden {
   width: 100vw;
   height: 100vh;
@@ -50,15 +64,19 @@ a:hover {
   align-content: center;
 }
 
-#banner {
+#landingPage {
   width: 100vw;
   height: 100vh;
-  background-image: url(./images/DSC2844.jpg);
+  background-image: url(./images/landingPage.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: fixed;
-  z-index:0;
+  z-index: 0;
+}
+
+h1 {
+  opacity: 0;
 }
 
 .contactMeBlock {
@@ -66,13 +84,30 @@ a:hover {
   width: 100vw;
   z-index: 10000;
   text-align: center;
-  height: 20vh;
+  height: 30vh;
   background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   right: 0;
   left: 0;
   margin-right: auto;
   margin-left: auto;
-  bottom: -20vh;
+  bottom: -30vh;
+}
+
+@media (max-width: 600px) {
+  .contactMeBlock {
+    position: fixed;
+    width: 100vw;
+    z-index: 3;
+    text-align: center;
+    height: 60vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    bottom: -90vh;
+  }
 }
