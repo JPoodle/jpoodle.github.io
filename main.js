@@ -86,7 +86,7 @@ $(document).ready(function () {
                         .promise()
                         .done();
                     });
-                }
+                };
                 travelActive++;
                 aboutMeActive = 0;
               }
@@ -122,7 +122,7 @@ $(document).ready(function () {
                 .done();
               travelActive = 0;
               aboutMeActive = 0;
-            }
+            };
           });
       });
   });
@@ -141,11 +141,11 @@ window.addEventListener("DOMContentLoaded", function () {
     form.reset();
     button.style = "display: none ";
     return alert("Thanks, I'll yell back soon!");
-  }
+  };
 
   function error() {
     return alert("Yell louder, your message isn't getting through!");
-  }
+  };
 
   // handle the form submission event
 
@@ -168,7 +168,7 @@ function ajax(method, url, data, success, error) {
       success(xhr.response, xhr.responseType);
     } else {
       error(xhr.status, xhr.response, xhr.responseType);
-    }
+    };
   };
   xhr.send(data);
-}
+};
