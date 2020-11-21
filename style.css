@@ -107,3 +107,13 @@ a:hover {
     bottom: -90vh;
   }
 }
+
+@media (max-width: 540px) {
+  .overlay {
+    padding-top: 56px;
+    height: 100vh;
+    overflow: auto;
+    position: relative;
+    display: fixed;
+  }
+}
