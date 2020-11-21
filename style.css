@@ -50,7 +50,7 @@ a:hover {
   background-image: url("./images/travelBackground.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left; 
+  background-position: left;
 }
 
 .hidden {
@@ -115,5 +115,10 @@ a:hover {
     overflow: auto;
     position: relative;
     display: fixed;
+  }
+}
+@media (max-width: 360px) {
+  .fab {
+    font-size: 15vw !important;
   }
 }
